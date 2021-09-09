@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background: #f9fafb;
+}
+.container {
+    margin: auto;
+    background: #ffffff;
+}
+.form {
+    margin: 20px;
+}
+h2 {
+    margin: 20px 0;
+    text-align: center;
+}
+label, small {
+    display: block;
+}
+button {
+    margin: 20px 0;
+}
