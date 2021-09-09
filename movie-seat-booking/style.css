@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  margin: 0 0 0 14px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  background-color: #fff;
+  font-size: 14px;
+  /*去掉input默认样式*/
+  appearance: none;
+}
+
+.container {
+  margin: 0 0 30px 0;
+  perspective: 1000px;
+}
+
+.seat {
+  margin: 3px;
+  height: 12px;
+  width: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #444451;
+}
+
+.showcase {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #777;
+  /*为了去掉list的前标*/
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase li small {
+  margin: 0 0 0 2px;
+}
+
+.screen {
+  margin: 15px 0;
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
