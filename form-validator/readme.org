@@ -1,0 +1,43 @@
+* Form Validator(Intro Project) 表单认证
+Simple client side form validation. Check required, length, email and password match
+简单表单认证登录页.检验必填`长度`email`密码匹配
+* Project Specifications 项目规格
+- create form UI
+- show error message under specific inputs
+- checkRequired() to accept array of inputs
+- checkLength() to check min and max length
+- checkEmail() to validate email with regex
+- checkPasswordsMatch() to match confirm password
+
+* tip
+** css
+*** 1 全局设置
+- 颜色变量
+- 盒子模型
+*** 2 body
+- 背景颜色
+- 字体
+- 浮动布局
+   全局居中小栗子.
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+*** 3 container
+- 背景颜色
+- 边框
+- 盒子阴影
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+- 宽度
+*** 4 form
+- 内边距设置好更美观
+*** 5 h2
+- text-align 水平居中
+*** 6 form-control 将lable和input连一起
+*** 7 input
+- width: 100%
+- focus时,outline:0,border-color:#777
+- small: 父绝子相,平时hidden,error时visible
+*** 8 button
+- cursor:pointer
+- 背景色+边框绘制更好看

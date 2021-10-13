@@ -1,0 +1,62 @@
+* Movie Seat Booking
+Display movie choices and seats in a theater to select from order to purchase tickets
+* Project Specifications
+- Display UI with movie select, screen, seats, legend && seat info
+- User can select a movie/price
+- User can select/deselect seats
+- User can not select occupied seats
+- Number of seats and price will update
+- Save seats, movie and price to local storage so that UI is still populated on refresh
+* TIP
+** HTML
+- 分为四部分 div.movie-container, ul.showcase, div.container, p.text
+ 有块状元素时,可以不用div
+- movie-container: label和select
+- showcase: 多个li
+    - li: seat和small,seat用div绘制
+- container: screen, row
+  - row: 多个seat
+- p: 特殊文本用span修饰
+** css
+**** 绘制select: 背景,边框,边框圆角,内部字体大小,padding,去除默认appearance,margin
+**** 上下容器最好20px
+**** 列表中的字和前面符号2px
+*** 1 body
+- 背景色,颜色,字体
+- 布局: 弹性布局,按上下分布,水平居中,垂直居中
+- margin:0
+*** 2 movie-container
+- 外边距: 容器与容器之间最好20px
+- select: 背景色,边框,字体大小,外边距,内边距撑大,去除默认appearance
+*** 3 绘制seat
+- 背景色
+- 高`宽`边框左上和右上圆角
+- 外边距
+---- .seat.selected .seat.occupied 对应背景色
+---- .seat:nth-of-type(2) .seat:nth-of-last-type(2)
+---- .seat:not(.occupied):hover 是.seat又不是.occupied, transform: scale(1.2)
+---- .showcase .seat:not(.occupied):hover 是.seat又不是.occupied,又是.showcase transform:scale(1)
+*** 4 showcase
+- 背景色: rgba(0, 0, 0, 0.1)经典调阴影
+- 内边距
+- 边框
+- 去除list的修饰
+- 布局flex, justify-content: space-between
+li
+- 弹性布局,水平`垂直居中,margin:0 10px
+li small
+- margin-left: 2px
+*** 5 container 先整体定型
+- perspective: 透视距离
+- margin-bottom:30px
+*** 6 row
+display:flex撑大container,为下一步绘制screen做准备
+*** 7 screen
+- 背景色
+- 高度,宽度100%
+- 外边距
+- transform: rotateX(-45deg)
+- 盒子阴影: 加大荧屏效果
+*** 8 p
+- p.text
+- p.text span

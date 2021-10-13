@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 * {
   box-sizing: border-box;
 }
 body {
   background-color: #242333;
   color: #fff;
+  font-family: "Lato", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: 'Lato', sans-serif;
   margin: 0;
 }
 .movie-container {
@@ -21,23 +21,19 @@ body {
   border: 0;
   border-radius: 5px;
   font-size: 14px;
-  margin: 0 0 0 10px;
+  margin-left: 5px;
   padding: 5px 15px 5px 15px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
-.container {
-  perspective: 1000px;
-  margin-bottom: 30px;
-}
 .seat {
   background-color: #444451;
   height: 12px;
   width: 15px;
-  margin: 3px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  margin: 3px;
 }
 .seat.selected {
   background-color: #6feaf6;
@@ -55,13 +51,13 @@ body {
   cursor: pointer;
   transform: scale(1.2);
 }
-.showcase .seat:not(.occupied):hover {
+.showcase .seat:hover {
   cursor: default;
   transform: scale(1);
 }
 .showcase {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 15px;
   border-radius: 5px;
   color: #777;
   list-style-type: none;
@@ -75,7 +71,11 @@ body {
   margin: 0 10px;
 }
 .showcase li small {
-  margin: 0 0 0 2px;
+  margin-left: 2px;
+}
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
 }
 .row {
   display: flex;
